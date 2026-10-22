@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy &mdash; NoRoadBack Publisher</title>
+  <meta name="description" content="Privacy Policy for NoRoadBack Publisher, a private publishing automation tool that uses the YouTube API Services.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="brand">NoRoadBack Publisher</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Privacy Policy</h1>
+    <p class="muted small">Last updated: 22 October 2026</p>
+
+    <div class="callout">
+      NoRoadBack Publisher uses <strong>YouTube API Services</strong>.
+      By using this application you also agree to the
+      <a href="https://www.youtube.com/t/terms" rel="noopener">YouTube Terms of Service</a> and to
+      <a href="https://policies.google.com/privacy" rel="noopener">Google&rsquo;s Privacy Policy</a>.
+    </div>
+
+    <h2>1. Who this policy applies to</h2>
+    <p>
+      NoRoadBack Publisher (&ldquo;the application&rdquo;) is a private, single-operator tool used
+      exclusively by the owner of the YouTube channel
+      <a href="https://www.youtube.com/@noroadback" rel="noopener">@noroadback</a>.
+      The application does not accept sign-ups and has no end users other than the channel owner.
+      This policy describes how the application handles data belonging to that single operator.
+    </p>
+
+    <h2>2. Data the application accesses</h2>
+    <p>When the channel owner authorizes the application through Google OAuth 2.0, the application receives access to:</p>
+    <ul>
+      <li>Metadata of the owner&rsquo;s YouTube channel and videos (titles, descriptions, tags, status, thumbnails, captions, playlists, localizations).</li>
+      <li>Non-monetary YouTube Analytics for the owner&rsquo;s own channel (views, watch time, retention).</li>
+      <li>The owner&rsquo;s channel ID and basic Google account identifier returned by the OAuth flow.</li>
+    </ul>
+    <p>The application does <strong>not</strong> request, access, store or transmit:</p>
+    <ul>
+      <li>Any data belonging to Google accounts other than the channel owner&rsquo;s.</li>
+      <li>Monetary / revenue analytics.</li>
+      <li>Private messages, email, Google Drive content, contacts or any other Google service outside YouTube.</li>
+    </ul>
+
+    <h2>3. OAuth scopes used and why</h2>
+    <table>
+      <thead>
+        <tr><th>Scope</th><th>Reason</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><code>https://www.googleapis.com/auth/youtube</code></td><td>Create and manage playlists and video metadata on the owner&rsquo;s channel.</td></tr>
+        <tr><td><code>https://www.googleapis.com/auth/youtube.upload</code></td><td>Upload video files to the owner&rsquo;s channel.</td></tr>
+        <tr><td><code>https://www.googleapis.com/auth/youtube.readonly</code></td><td>Read current state of the owner&rsquo;s channel/videos to plan publishing and avoid duplicates.</td></tr>
+        <tr><td><code>https://www.googleapis.com/auth/youtube.force-ssl</code></td><td>Set custom thumbnails and manage captions on the owner&rsquo;s videos.</td></tr>
+        <tr><td><code>https://www.googleapis.com/auth/yt-analytics.readonly</code></td><td>Read non-monetary analytics for the owner&rsquo;s own channel.</td></tr>
+      </tbody>
+    </table>
+
+    <h2>4. Where the data lives</h2>
+    <p>
+      The OAuth <strong>refresh token</strong> issued by Google is stored locally in a
+      <code>.env</code> file on the channel owner&rsquo;s own machine. Short-lived access tokens are
+      held only in memory while the tool runs. Video files, titles, descriptions, captions and
+      scheduling data are kept locally on the owner&rsquo;s machine and in the owner&rsquo;s own
+      Google Workspace (Google Sheets / Google Drive) for internal planning. Neither tokens nor
+      content are transmitted to any server operated by anyone other than Google (YouTube APIs).
+    </p>
+
+    <h2>5. How the data is used</h2>
+    <ul>
+      <li>To publish, update, localize and schedule the owner&rsquo;s own videos on the owner&rsquo;s own channel.</li>
+      <li>To read the owner&rsquo;s own channel analytics to decide what to publish next.</li>
+      <li>Nothing is used for advertising. Nothing is sold or shared with third parties.</li>
+      <li>No automated profiling or decisions are made about any person other than evaluating the owner&rsquo;s own publishing cadence.</li>
+    </ul>
+
+    <h2>6. Sharing with third parties</h2>
+    <p>
+      The application does not share any accessed data with any third party. The only external
+      systems the application communicates with are Google&rsquo;s YouTube Data API, YouTube Analytics
+      API and (for upload content delivery) <code>upload.youtube.googleapis.com</code>.
+      All transfers happen over HTTPS.
+    </p>
+
+    <h2>7. Retention and deletion</h2>
+    <p>
+      The refresh token is retained locally on the owner&rsquo;s machine until the owner either
+      deletes it from the <code>.env</code> file or revokes the application at
+      <a href="https://myaccount.google.com/connections" rel="noopener">myaccount.google.com/connections</a>.
+      Revocation makes the stored refresh token immediately unusable. On request to the contact
+      address below, any local copies of the token, cached metadata or analytics snapshots will be
+      destroyed.
+    </p>
+
+    <h2>8. Compliance with YouTube API Services</h2>
+    <p>
+      In accordance with the
+      <a href="https://developers.google.com/youtube/terms/api-services-terms-of-service" rel="noopener">YouTube API Services Terms of Service</a>
+      and the
+      <a href="https://developers.google.com/youtube/terms/developer-policies" rel="noopener">YouTube API Services Developer Policies</a>:
+    </p>
+    <ul>
+      <li>Data obtained through the YouTube API Services is used only to operate NoRoadBack Publisher for the owner&rsquo;s own channel.</li>
+      <li>No YouTube API Services data is used for advertising, resold, or shared with third parties.</li>
+      <li>Users can revoke the application&rsquo;s access to their YouTube data via the Google security settings page linked above.</li>
+    </ul>
+
+    <h2>9. Children</h2>
+    <p>The application is not directed at children and has no end users other than the channel owner, who is an adult.</p>
+
+    <h2>10. Changes to this policy</h2>
+    <p>If this policy changes, the updated version will be published at this URL with an updated &ldquo;Last updated&rdquo; date.</p>
+
+    <h2 id="contact">11. Contact</h2>
+    <p>
+      Operator: Marek Boratynski.<br>
+      For any privacy question or data deletion request, contact the operator through the
+      <a href="https://www.youtube.com/@noroadback/about" rel="noopener">@noroadback channel &ldquo;About&rdquo; page</a>.
+    </p>
+  </main>
+
+  <footer>
+    <div>&copy; NoRoadBack Publisher</div>
+    <div>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+    </div>
+  </footer>
+</body>
+</html>

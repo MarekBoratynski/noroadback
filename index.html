@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NoRoadBack Publisher</title>
+  <meta name="description" content="Internal publishing automation for the YouTube channel @noroadback. Uses the YouTube API Services.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="brand">NoRoadBack Publisher</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>NoRoadBack Publisher</h1>
+    <p class="tagline">Internal publishing automation for the YouTube channel <a href="https://www.youtube.com/@noroadback" rel="noopener">@noroadback</a>.</p>
+
+    <div class="callout">
+      <strong>Uses YouTube API Services.</strong>
+      By authorizing this application you are also agreeing to the
+      <a href="https://www.youtube.com/t/terms" rel="noopener">YouTube Terms of Service</a> and the
+      <a href="https://policies.google.com/privacy" rel="noopener">Google Privacy Policy</a>.
+    </div>
+
+    <h2>What this tool does</h2>
+    <p>
+      NoRoadBack Publisher is a private, single-operator tool that automates the publishing workflow of
+      the travel YouTube channel <strong>@noroadback</strong>. It takes finished video files, titles,
+      descriptions, tags, chapters, thumbnails, captions and multilingual metadata that the channel
+      owner has prepared locally, and submits them to YouTube on the owner&rsquo;s behalf through the
+      official <a href="https://developers.google.com/youtube/v3" rel="noopener">YouTube Data API v3</a>
+      and <a href="https://developers.google.com/youtube/analytics" rel="noopener">YouTube Analytics API</a>.
+    </p>
+
+    <h3>Typical weekly workload on the owner&rsquo;s channel</h3>
+    <ul>
+      <li>1 long-form video per week (horizontal, 16:9)</li>
+      <li>~7 short teasers per week derived from the long-form video</li>
+      <li>~14 Shorts per week (vertical, 9:16)</li>
+      <li>Captions and localized titles/descriptions in multiple languages per video</li>
+    </ul>
+
+    <h2>Who can use it</h2>
+    <p>
+      The tool is operated by one person &mdash; the owner of the <strong>@noroadback</strong> channel &mdash;
+      and runs on that owner&rsquo;s own machine. There are no end users other than the channel owner.
+      No account other than the channel owner&rsquo;s Google account is ever asked for authorization.
+    </p>
+
+    <h2>What permissions it requests</h2>
+    <p>The tool uses the following OAuth 2.0 scopes against the channel owner&rsquo;s Google account:</p>
+    <table>
+      <thead>
+        <tr><th>Scope</th><th>Why it is needed</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><code>youtube</code></td><td>Create, update and read playlists and video metadata on the owner&rsquo;s channel.</td></tr>
+        <tr><td><code>youtube.upload</code></td><td>Upload finished long-form videos, teasers and Shorts to the owner&rsquo;s channel.</td></tr>
+        <tr><td><code>youtube.readonly</code></td><td>Read channel/video state (status, publish time, existing localizations) to decide what to publish or update next.</td></tr>
+        <tr><td><code>youtube.force-ssl</code></td><td>Set thumbnails and manage captions on the owner&rsquo;s videos.</td></tr>
+        <tr><td><code>yt-analytics.readonly</code></td><td>Read non-monetary analytics (views, watch time, retention) for the owner&rsquo;s own channel to inform the publishing plan.</td></tr>
+      </tbody>
+    </table>
+
+    <h2>How your data is handled</h2>
+    <ul>
+      <li>The only Google account the tool ever accesses is the channel owner&rsquo;s own.</li>
+      <li>The OAuth refresh token is stored locally in a <code>.env</code> file on the owner&rsquo;s machine. It is never transmitted to any third party and never leaves that machine.</li>
+      <li>No video content, metadata or analytics data is sold, shared or sent to any server other than Google&rsquo;s YouTube APIs.</li>
+      <li>Full detail: <a href="privacy.html">Privacy Policy</a>.</li>
+    </ul>
+
+    <h2>Revoking access</h2>
+    <p>
+      The channel owner can revoke this application&rsquo;s access at any time at
+      <a href="https://myaccount.google.com/connections" rel="noopener">myaccount.google.com/connections</a>.
+      After revocation the application can no longer act on the channel.
+    </p>
+
+    <h2>Contact</h2>
+    <p>Operator: Marek Boratynski. Contact: see <a href="privacy.html#contact">Privacy Policy &rarr; Contact</a>.</p>
+  </main>
+
+  <footer>
+    <div>&copy; NoRoadBack Publisher</div>
+    <div>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+    </div>
+  </footer>
+</body>
+</html>
